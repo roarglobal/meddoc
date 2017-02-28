@@ -12,7 +12,7 @@ class DoctorsController < ApplicationController
 	def create
 		@doctor = Doctor.new(doctor_params)
 		@doctor.user = current_user
-		
+
 		if @doctor.save
 			redirect_to @doctor, notice: "Successfully created new Doctor"
 		else
@@ -40,7 +40,7 @@ class DoctorsController < ApplicationController
 	private
 
 	def doctor_params
-		params.require(:doctor).permit(:officename,:address,:city,:state,:zipcode,:description)
+		params.require(:doctor).permit(:officename,:address,:city,:state,:zipcode,:description, :image)
 	end
 
 	def find_doctor
