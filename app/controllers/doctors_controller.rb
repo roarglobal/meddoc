@@ -3,6 +3,7 @@ class DoctorsController < ApplicationController
 	
 	def new
 		@doctor = Doctor.new
+		@doctor.user = current_user
 	end
 
 	def show
@@ -10,7 +11,8 @@ class DoctorsController < ApplicationController
 
 	def create
 		@doctor = Doctor.new(doctor_params)
-
+		@doctor.user = current_user
+		
 		if @doctor.save
 			redirect_to @doctor, notice: "Successfully created new Doctor"
 		else
