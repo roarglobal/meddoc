@@ -19,13 +19,20 @@ class DoctorsController < ApplicationController
 	end
 
 	def index
-		@pins = Pin.all
+		@doctors = Doctor.all
 	end
 
 	def update
+		if @doctor.update(doctor_params)
+			redirect_to @doctor, notice: "Pin was Successfully updated!"
+		else
+			render 'edit'
+		end
 	end
 
-	def delete
+	def destroy
+		@doctor.destroy
+		redirect_to root_path
 	end
 
 	private

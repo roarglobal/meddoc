@@ -1,1 +1,2 @@
-%h1 This is the doctors index
+- @doctors.each do |doctor|
+	%h2= link_to doctor.officename, doctor

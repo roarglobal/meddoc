@@ -1,2 +1,5 @@
 %h1= @doctor.officename
 %p= @doctor.description
+= link_to "Back", root_path
+= link_to "Edit", edit_doctor_path
+= link_to "Delete", doctor_path, method: :delete, data: {confirm: "Are you sure?"}
