@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  officename: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zipcode: 
+  description: MyText
+  price_initial: 9.99
+  price_renewal: 9.99
+  length_visit: 
+  insurance_accepted: 
+  languages: MyString
+  years_practiced: 
+
+two:
+  officename: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zipcode: 
+  description: MyText
+  price_initial: 9.99
+  price_renewal: 9.99
+  length_visit: 
+  insurance_accepted: 
+  languages: MyString
+  years_practiced: 
