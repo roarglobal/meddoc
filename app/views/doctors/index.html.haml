@@ -1,3 +1,8 @@
-- @doctors.each do |doctor|
-	= link_to (image_tag doctor.image.url(:medium)), doctor
-	%h2= link_to doctor.officename, doctor
+#doctors.transitions-enabled
+	- @doctors.each do |doctor|
+		.box.panel.panel-default
+			= link_to (image_tag doctor.image.url), doctor
+			%h2= link_to doctor.officename, doctor
+			%p.user
+				Submitted by
+				= doctor.user.email
